@@ -1,0 +1,29 @@
+2025-11-26 17:45:05,838 - __main__ - ERROR - Fatal error: name 'Dict' is not defined
+Traceback (most recent call last):
+  File "D:\coding projects\anime_library\main.py", line 28, in main
+    from main_window import AnimeLibraryWindow
+  File "D:\coding projects\anime_library\main_window.py", line 31, in <module>
+    class AnimeLibraryWindow:
+  File "D:\coding projects\anime_library\main_window.py", line 574, in AnimeLibraryWindow
+    def on_level_up(self, new_level: int, result: Dict):
+                                                  ^^^^
+NameError: name 'Dict' is not defined
+2025-11-26 17:47:47,734 - __main__ - ERROR - Fatal error: name 'Dict' is not defined
+Traceback (most recent call last):
+  File "D:\coding projects\anime_library\main.py", line 28, in main
+    from main_window import AnimeLibraryWindow
+  File "D:\coding projects\anime_library\main_window.py", line 31, in <module>
+    class AnimeLibraryWindow:
+  File "D:\coding projects\anime_library\main_window.py", line 574, in AnimeLibraryWindow
+    def on_level_up(self, new_level: int, result: Dict):
+                                                  ^^^^
+NameError: name 'Dict' is not defined
+2025-11-26 17:48:14,264 - __main__ - INFO - Starting Anime Library...
+2025-11-26 17:48:14,264 - __main__ - INFO - Checking for updates...
+2025-11-26 17:48:28,241 - __main__ - INFO - Application closed.
+2025-11-26 17:50:24,127 - __main__ - INFO - Starting Anime Library...
+2025-11-26 17:50:24,127 - __main__ - INFO - Checking for updates...
+2025-11-26 17:50:28,333 - __main__ - INFO - Application closed.
+2025-11-26 17:53:20,246 - __main__ - INFO - Starting Anime Library...
+2025-11-26 17:53:20,246 - __main__ - INFO - Checking for updates...
+2025-11-26 17:53:37,279 - __main__ - INFO - Application closed.

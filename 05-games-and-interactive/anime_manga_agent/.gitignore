@@ -1,0 +1,39 @@
+# Environment variables — never commit secrets
+.env
+.env.*
+!.env.example
+
+# SQLite database — runtime data, not source code
+*.db
+*.sqlite
+*.sqlite3
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+
+# IDE
+.idea/
+.vscode/
+*.suo
+*.user
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db

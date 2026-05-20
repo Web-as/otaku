@@ -1,0 +1,95 @@
+{
+  "agent": {
+    "name": "AnimeMangaAgent",
+    "version": "1.0.0",
+    "timezone": "UTC",
+    "description": "AI-powered anime and manga recommendation agent with personality, time awareness, and internet access",
+    "default_language": "en",
+    "supported_languages": ["en", "ja", "ru", "lt", "es"]
+  },
+  "security": {
+    "encryption_algorithm": "AES-256-GCM",
+    "token_expiry_hours": 24,
+    "max_login_attempts": 5,
+    "lockout_duration_minutes": 30,
+    "password_min_length": 12,
+    "session_timeout_minutes": 60
+  },
+  "database": {
+    "type": "sqlite",
+    "path": "./data/anime_manga_agent.db",
+    "backup_interval_hours": 6,
+    "max_backup_files": 10
+  },
+  "web_scraping": {
+    "request_timeout_seconds": 30,
+    "max_concurrent_requests": 5,
+    "retry_attempts": 3,
+    "retry_delay_seconds": 2,
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+  },
+  "anime_api": {
+    "jikan_base_url": "https://api.jikan.moe/v4",
+    "anilist_base_url": "https://graphql.anilist.co",
+    "cache_duration_hours": 1,
+    "rate_limit_requests_per_second": 0.5
+  },
+  "manga_api": {
+    "jikan_base_url": "https://api.jikan.moe/v4",
+    "anilist_base_url": "https://graphql.anilist.co",
+    "mangadex_base_url": "https://api.mangadex.org",
+    "cache_duration_hours": 1
+  },
+  "streaming_api": {
+    "consumet_base_url": "https://api.consumet.org",
+    "kitsu_base_url": "https://kitsu.io/api/edge",
+    "cache_duration_hours": 1
+  },
+  "recommendation": {
+    "min_similarity_score": 0.6,
+    "max_recommendations": 10,
+    "trend_weight": 0.3,
+    "preference_weight": 0.5,
+    "time_relevance_weight": 0.2,
+    "seasonal_boost_multiplier": 1.5
+  },
+  "trend_tracking": {
+    "update_interval_hours": 6,
+    "historical_days": 30,
+    "min_trend_score": 0.5
+  },
+  "personality": {
+    "waifu": "Mikasa Ackerman",
+    "most_hated": "Chi-Chi",
+    "rival_name": "Satoshi 'The Casual' Tanaka",
+    "enable_hot_takes": true,
+    "enable_rival_complaints": true
+  },
+  "anichart": {
+    "note": "AniChart uses the AniList GraphQL API (https://graphql.anilist.co) — no API key required.",
+    "anilist_graphql_url": "https://graphql.anilist.co",
+    "cache_duration_hours": 1,
+    "default_per_page": 50
+  },
+  "server": {
+    "host": "0.0.0.0",
+    "port": 5000,
+    "debug": false,
+    "cors_origins": [
+      "http://localhost:5176",
+      "http://localhost:5173",
+      "http://localhost:3000"
+    ],
+    "cors_note": "Add your production tracker/blog domains here before deploy."
+  },
+  "logging": {
+    "level": "INFO",
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    "file": "./logs/agent.log"
+  },
+  "web_agent": {
+    "api_key": "",
+    "api_key_note": "Set BROWSERUSE_API_KEY (preferred) or ANIME_MANGA_WEB_AGENT_API_KEY in environment.",
+    "search_url": "https://api.browseruse.com/search"
+  }
+}

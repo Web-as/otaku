@@ -7,4 +7,4 @@ export {
   patchMiniPost,
   deleteMiniPost,
   toggleMiniPostLike,
-} from '../../../shared/miniPosts/localMiniPosts';
+} from '@/shared/miniPosts/localMiniPosts';

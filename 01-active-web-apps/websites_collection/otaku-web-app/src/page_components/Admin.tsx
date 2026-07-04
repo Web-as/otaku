@@ -4,11 +4,11 @@ import { Plus, Edit, Trash2, Eye, LogOut, ArrowLeft } from 'lucide-react';
 import { onAuthChange, getCurrentUser, logOut } from '@/lib/firebase';
 import { getUserPosts, deleteBlogPost, createBlogPost, updateBlogPost } from '../services/blogService';
 import PostEditor from '@/components/blog/PostEditor';
-import { LoadingSpinner } from '../../../shared/components/LoadingSpinner';
-import { useUserProfile } from '../../../shared/hooks/useUserProfile';
-import { UserProfileCard } from '../../../shared/components/UserBadge';
+import { LoadingSpinner } from '@/shared/components/LoadingSpinner';
+import { useUserProfile } from '@/shared/hooks/useUserProfile';
+import { UserProfileCard } from '@/shared/components/UserBadge';
 import type { BlogPost } from '../types';
-import type { BadgeType } from '../../../shared/types/userBadges';
+import type { BadgeType } from '@/shared/types/userBadges';
 
 const Admin: React.FC = () => {
   const router = useRouter();

@@ -9,12 +9,12 @@ import {
   getUserBlogPosts,
   getUserProfile,
   type BlogPost as DBBlogPost
-} from '../../../shared/supabase';
+} from '@/shared/supabase';
 import type { BlogPost } from '../types';
 
 // Flag to switch between mock data and database
 // Controlled by environment variable VITE_USE_SUPABASE
-import { envFlag } from '../../../shared/utils/runtimeEnv';
+import { envFlag } from '@/shared/utils/runtimeEnv';
 
 const USE_DATABASE = true;
 

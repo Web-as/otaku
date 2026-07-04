@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { X, Mail, Lock, User as UserIcon, AlertCircle } from 'lucide-react';
-import { signIn, signUp } from '../../../shared/firebase';
-import { isValidEmail, isValidPassword, sanitizeHTML } from '../../../shared/utils/validation';
+import { signIn, signUp } from '@/shared/firebase';
+import { isValidEmail, isValidPassword, sanitizeHTML } from '@/shared/utils/validation';
 
 interface AuthModalProps {
   isOpen: boolean;

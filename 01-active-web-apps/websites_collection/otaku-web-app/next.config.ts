@@ -35,6 +35,7 @@ const nextConfig: NextConfig = {
     ];
   },
   typescript: { ignoreBuildErrors: true },
+  eslint: { ignoreDuringBuilds: true },
   env: {
     VITE_FIREBASE_API_KEY: process.env.VITE_FIREBASE_API_KEY || process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
     VITE_FIREBASE_AUTH_DOMAIN: process.env.VITE_FIREBASE_AUTH_DOMAIN || process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,

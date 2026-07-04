@@ -5,3 +5,4 @@ export const useXRStore = () => ({
   getState: () => ({ mode: 'inline' }),
 });
 export const xrStore = useXRStore();
+export const guildXRStore = useXRStore();

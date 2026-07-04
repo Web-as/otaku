@@ -2,7 +2,7 @@
 // Add your Supabase credentials to .env.local in the ROOT of the project
 
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
-import { env } from '../../../../shared/utils/runtimeEnv';
+import { env } from '@/shared/utils/runtimeEnv';
 
 // Supabase configuration from environment variables
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || env('VITE_SUPABASE_URL');

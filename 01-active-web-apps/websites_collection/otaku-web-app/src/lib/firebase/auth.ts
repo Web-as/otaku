@@ -9,9 +9,9 @@ import {
   type UserCredential,
 } from 'firebase/auth';
 import { auth } from './config';
-import { upsertUserProfile, getUserProfile } from '../../../../shared/supabase/database';
-import { markJustRegistered } from '../../../../shared/membership/passPrompt';
-import { env as readEnv } from '../../../../shared/utils/runtimeEnv';
+import { upsertUserProfile, getUserProfile } from '@/shared/supabase/database';
+import { markJustRegistered } from '@/shared/membership/passPrompt';
+import { env as readEnv } from '@/shared/utils/runtimeEnv';
 
 // Bootstrap user profile in Supabase on first login
 export const bootstrapUserProfile = async (user: User): Promise<void> => {

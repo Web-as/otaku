@@ -7,7 +7,7 @@ import { getAuth } from 'firebase/auth';
 import type { Auth } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 import type { Firestore } from 'firebase/firestore';
-import { env } from '../../../../shared/utils/runtimeEnv';
+import { env } from '@/shared/utils/runtimeEnv';
 
 // Firebase configuration from environment variables
 const firebaseConfig = {

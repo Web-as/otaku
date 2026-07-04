@@ -1,0 +1,83 @@
+/* Ghost prompts from Kana (Anime Librarian) inside .blog compose surfaces */
+
+.blog {
+  position: relative;
+}
+
+.blog-librarian-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.blog-librarian-header span {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(34, 211, 238, 0.55);
+}
+
+.blog-librarian-whispers {
+  position: relative;
+  min-height: 5.5rem;
+  margin-bottom: 0.75rem;
+  pointer-events: none;
+}
+
+.blog-librarian-whisper {
+  position: absolute;
+  max-width: 88%;
+  font-size: 0.72rem;
+  font-style: italic;
+  line-height: 1.35;
+  color: rgba(148, 163, 184, 0.2);
+  text-shadow: none;
+  user-select: none;
+  transition: color 0.2s ease;
+}
+
+.blog-librarian-whisper:nth-child(1) {
+  top: 0;
+  left: 0;
+}
+
+.blog-librarian-whisper:nth-child(2) {
+  top: 1.75rem;
+  right: 0;
+  text-align: right;
+}
+
+.blog-librarian-whisper:nth-child(3) {
+  top: 3.5rem;
+  left: 8%;
+}
+
+.blog-librarian-whisper:nth-child(4) {
+  top: 5rem;
+  right: 6%;
+  text-align: right;
+  font-size: 0.68rem;
+}
+
+.blog:focus-within .blog-librarian-whisper,
+.blog-librarian-whispers:hover .blog-librarian-whisper {
+  color: rgba(148, 163, 184, 0.32);
+}
+
+.blog-librarian-comment {
+  margin-top: 0.75rem;
+  padding: 0.65rem 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(34, 211, 238, 0.25);
+  background: rgba(8, 47, 73, 0.35);
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: rgba(226, 232, 240, 0.92);
+}
+
+.blog-librarian-comment strong {
+  color: rgba(34, 211, 238, 0.95);
+  font-weight: 600;
+}

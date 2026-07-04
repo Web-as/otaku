@@ -1,0 +1,162 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Anime D&D Campaign Hierarchy Schema",
+  "description": "A comprehensive schema for structuring an AI-driven D&D Anime Roleplay, scaling from single quests to massive multi-seasonal franchises.",
+  "type": "object",
+  "definitions": {
+
+    "Encounter": {
+      "type": "object",
+      "properties": {
+        "encounter_type": { "type": "string", "enum": ["combat", "social", "exploration", "puzzle", "anime_moment"] },
+        "description": { "type": "string", "description": "The narrative setup for the encounter." },
+        "difficulty_class": { "type": "integer", "description": "The base DC for skill checks or average enemy AC." },
+        "kishotenketsu_phase": { "type": "string", "enum": ["ki (intro)", "sho (development)", "ten (twist)", "ketsu (resolution)"] },
+        "win_condition": { "type": "string" },
+        "loss_condition": { "type": "string", "description": "What happens if the player fails (e.g., capture, time loop, injury)." }
+      },
+      "required": ["encounter_type", "description", "win_condition"]
+    },
+
+    "ShortQuestScroll": {
+      "type": "object",
+      "description": "An Episode or One-Shot. A localized, single-session adventure.",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "guild_rank_required": { "type": "string", "enum": ["F", "E", "D", "C", "B", "A", "S"] },
+        "client": { "type": "string", "description": "NPC who issued the quest." },
+        "plot_hook": { "type": "string" },
+        "encounters": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/Encounter" },
+          "minItems": 1,
+          "maxItems": 5
+        },
+        "rewards": {
+          "type": "object",
+          "properties": {
+            "gold": { "type": "integer" },
+            "items": { "type": "array", "items": { "type": "string" } },
+            "reputation": { "type": "integer" }
+          }
+        }
+      },
+      "required": ["title", "plot_hook", "encounters"]
+    },
+
+    "QuestLog": {
+      "type": "object",
+      "description": "A Story Arc (e.g., Tournament Arc, Rescue Arc). Connects 3-8 Quest Scrolls together.",
+      "properties": {
+        "id": { "type": "string" },
+        "arc_title": { "type": "string" },
+        "anime_trope": { "type": "string", "examples": ["Tournament", "Training Montage", "Festival", "Beach Episode", "Invasion"] },
+        "overarching_goal": { "type": "string" },
+        "key_antagonist": { "type": "string" },
+        "quests": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/ShortQuestScroll" },
+          "description": "The sequential episodes that make up this arc."
+        },
+        "arc_climax": { "$ref": "#/definitions/Encounter", "description": "The boss fight or massive social confrontation that resolves the arc." },
+        "character_growth_milestone": { "type": "string", "description": "How the OC changes or what new power they unlock (e.g., Bankai, Limit Break)." }
+      },
+      "required": ["arc_title", "quests", "arc_climax"]
+    },
+
+    "QuestBook": {
+      "type": "object",
+      "description": "A Long Season (typically 12-24 episodes). Consists of multiple Quest Logs (Arcs).",
+      "properties": {
+        "id": { "type": "string" },
+        "season_title": { "type": "string" },
+        "season_theme": { "type": "string" },
+        "world_state": { "type": "string", "description": "The current state of the game world before the season begins." },
+        "arcs": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/QuestLog" }
+        },
+        "big_bad_evil_guy": { 
+          "type": "object",
+          "properties": {
+            "name": { "type": "string" },
+            "motivation": { "type": "string" },
+            "power_level": { "type": "string" }
+          }
+        },
+        "season_finale_consequences": {
+          "type": "object",
+          "properties": {
+            "world_changes": { "type": "string" },
+            "npc_deaths_or_betrayals": { "type": "array", "items": { "type": "string" } }
+          }
+        }
+      },
+      "required": ["season_title", "arcs", "big_bad_evil_guy"]
+    },
+
+    "QuestCampaign": {
+      "type": "object",
+      "description": "A Full Run / Series (e.g., Naruto Part 1). Tells a complete overarching narrative containing multiple Seasons.",
+      "properties": {
+        "id": { "type": "string" },
+        "campaign_title": { "type": "string" },
+        "cosmology": { "type": "string", "description": "The rules of the universe, magic systems, and gods." },
+        "seasons": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/QuestBook" }
+        },
+        "core_cast": {
+          "type": "array",
+          "items": { "type": "string", "description": "The main party members who survive and persist through the whole series." }
+        },
+        "endgame_resolution": { "type": "string", "description": "The final state of the world once the Campaign is fully completed (Level 20 equivalent)." }
+      },
+      "required": ["campaign_title", "seasons"]
+    },
+
+    "Franchise": {
+      "type": "object",
+      "description": "The ultimate Multi-Seasonal Universe (e.g., Fate Series, MCU). Multiple standalone but connected Campaigns.",
+      "properties": {
+        "id": { "type": "string" },
+        "franchise_name": { "type": "string" },
+        "multiverse_rules": { "type": "string", "description": "How different dimensions or timelines interact (crucial for Isekai)." },
+        "campaigns": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/QuestCampaign" },
+          "description": "Different series set in the same universe, possibly with different OCs or time periods."
+        },
+        "crossover_events": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "event_name": { "type": "string" },
+              "involved_campaigns": { "type": "array", "items": { "type": "string" } },
+              "description": { "type": "string" }
+            }
+          }
+        }
+      },
+      "required": ["franchise_name", "campaigns"]
+    }
+
+  },
+
+  "type": "object",
+  "properties": {
+    "active_franchise": { "$ref": "#/definitions/Franchise" },
+    "current_state": {
+      "type": "object",
+      "properties": {
+        "active_campaign_id": { "type": "string" },
+        "active_season_id": { "type": "string" },
+        "active_arc_id": { "type": "string" },
+        "active_quest_id": { "type": "string" }
+      }
+    }
+  },
+  "required": ["active_franchise", "current_state"]
+}

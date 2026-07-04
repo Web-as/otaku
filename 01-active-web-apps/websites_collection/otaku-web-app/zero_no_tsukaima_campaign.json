@@ -1,0 +1,177 @@
+{
+  "active_franchise": {
+    "id": "franchise_001",
+    "franchise_name": "Zero no Tsukaima: The Halkeginia Saga",
+    "multiverse_rules": "Halkeginia is a continent where Nobles can use magic and commoners cannot. Magic is based on the four elements (Fire, Water, Earth, Wind). A lost fifth element, Void Magic, exists but is forbidden. Humans from Earth ('Earthlings') can be summoned as familiars and granted powerful runes (e.g., Gandalfr, the left hand of God).",
+    "campaigns": [
+      {
+        "id": "campaign_001",
+        "campaign_title": "The Familiar's Ascent",
+        "cosmology": "The player is a custom Original Character (OC) who was either summoned from Earth as a Familiar alongside Saito, or is a disgraced Noble student at the Tristain Magic Academy. The world follows D&D mechanics but re-skinned: Arcane casters are Nobles, Martials are Familiars/Commoners.",
+        "core_cast": [
+          "Louise Françoise Le Blanc de La Vallière",
+          "Hiraga Saito (Gandalfr)",
+          "The Player Character (Custom OC)"
+        ],
+        "endgame_resolution": "Defeating the Ancient Dragon and preventing the Pope's crusade from destroying both Halkeginia and Earth.",
+        "seasons": [
+          {
+            "id": "season_001",
+            "season_title": "Quest Book 1: The Springtime Summoning",
+            "season_theme": "Academy Life, Political Espionage, and the Reconquista Rebellion",
+            "world_state": "The Tristain Academy is peaceful, but rumors of the Albion rebellion and a rogue faction called Reconquista are spreading.",
+            "big_bad_evil_guy": {
+              "name": "Wardes (Captain of the Magic Guard)",
+              "motivation": "To kidnap Queen Henrietta and steal the Water Ruby for the Reconquista.",
+              "power_level": "Level 6 Eldritch Knight (Wind Mage)"
+            },
+            "arcs": [
+              {
+                "id": "arc_1_001",
+                "arc_title": "The Summoning Ritual",
+                "anime_trope": "The Isekai Arrival / School Exam",
+                "overarching_goal": "Establish the Player Character's role at the Academy and bond with a master or familiar.",
+                "key_antagonist": "Guiche de Gramont (Rivalry)",
+                "arc_climax": {
+                  "encounter_type": "combat",
+                  "description": "A duel on the academy courtyard against Guiche and his summoned Valkyrie Golems.",
+                  "difficulty_class": 12,
+                  "kishotenketsu_phase": "ketsu (resolution)",
+                  "win_condition": "Defeat Guiche's Golems. The OC unlocks their first class ability or familiar rune.",
+                  "loss_condition": "Humiliation. The OC is forced to do the Academy's laundry for a month, losing reputation."
+                },
+                "quests": [
+                  {
+                    "id": "quest_1_001_1",
+                    "title": "Familiar Registration",
+                    "guild_rank_required": "F",
+                    "client": "Professor Chevreuse",
+                    "plot_hook": "The OC must complete a maze in the Academy dungeons to prove their worth to the professors.",
+                    "encounters": [
+                      {
+                        "encounter_type": "puzzle",
+                        "description": "Navigate a shifting maze guarded by low-level earth golems.",
+                        "difficulty_class": 10,
+                        "win_condition": "Retrieve the Registration Seal."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "arc_1_002",
+                "arc_title": "The Tarbes Village Incident & The Thief",
+                "anime_trope": "The First Real Mission",
+                "overarching_goal": "Recover the Staff of Destruction (a Rocket Launcher) from the thief Fouquet.",
+                "key_antagonist": "Fouquet the Crumbling Dirt",
+                "arc_climax": {
+                  "encounter_type": "combat",
+                  "description": "Boss fight against Fouquet and her massive 30-foot Earth Golem.",
+                  "difficulty_class": 15,
+                  "kishotenketsu_phase": "ketsu (resolution)",
+                  "win_condition": "Destroy the golem's core and capture Fouquet.",
+                  "loss_condition": "Fouquet escapes with the staff, causing massive destruction to the village."
+                },
+                "quests": []
+              }
+            ],
+            "season_finale_consequences": {
+              "world_changes": "War is declared between Tristain and the rebel forces of Albion.",
+              "npc_deaths_or_betrayals": ["Wardes revealed as a traitor"]
+            }
+          },
+          {
+            "id": "season_002",
+            "season_title": "Quest Book 2: Knight of the Twin Moons",
+            "season_theme": "All-Out War, Void Magic Awakening",
+            "world_state": "Tristain is actively at war. The Academy has been militarized.",
+            "big_bad_evil_guy": {
+              "name": "Cromwell",
+              "motivation": "To conquer Tristain using the Ring of Andvari.",
+              "power_level": "Level 10 Warlock"
+            },
+            "arcs": [
+              {
+                "id": "arc_2_001",
+                "arc_title": "The Defense of Tristain",
+                "anime_trope": "The Siege / Last Stand",
+                "overarching_goal": "Hold off the 70,000 strong Albion army so Queen Henrietta can evacuate.",
+                "arc_climax": {
+                  "encounter_type": "combat",
+                  "description": "Stand alongside Saito to hold the chokepoint against waves of Dragon Knights.",
+                  "difficulty_class": 18,
+                  "kishotenketsu_phase": "ketsu (resolution)",
+                  "win_condition": "Survive 5 rounds of combat until the Void Magic spell 'Explosion' is charged.",
+                  "loss_condition": "The OC 'dies' holding the line, but is resurrected by Tiffania later (plot armor mechanic)."
+                },
+                "quests": []
+              }
+            ]
+          },
+          {
+            "id": "season_003",
+            "season_title": "Quest Book 3: Rondo of Princesses",
+            "season_theme": "Political Intrigue, Gallia's Threat",
+            "world_state": "The war is over, but Saito's runes have vanished. King Joseph of Gallia is making moves.",
+            "big_bad_evil_guy": {
+              "name": "King Joseph of Gallia",
+              "motivation": "To plunge the world into chaos because he lacks the ability to feel emotion.",
+              "power_level": "Level 15 Void Master"
+            },
+            "arcs": [
+              {
+                "id": "arc_3_001",
+                "arc_title": "Rescue Tabitha",
+                "anime_trope": "The Prison Break",
+                "overarching_goal": "Infiltrate the Kingdom of Gallia to rescue the OC's classmate, Tabitha.",
+                "arc_climax": {
+                  "encounter_type": "combat",
+                  "description": "Fight Sheffield, the familiar of King Joseph, and her summoned monsters in the dungeon.",
+                  "difficulty_class": 20,
+                  "kishotenketsu_phase": "ketsu (resolution)",
+                  "win_condition": "Defeat Sheffield and break Tabitha's mind-control curse."
+                },
+                "quests": []
+              }
+            ]
+          },
+          {
+            "id": "season_004",
+            "season_title": "Quest Book 4: The Final Chapter",
+            "season_theme": "Cosmic Stakes, Two Worlds Collide",
+            "world_state": "The Pope has declared a holy crusade to reclaim the Holy Land, which will drain Halkeginia's magic and destroy Earth.",
+            "big_bad_evil_guy": {
+              "name": "The Ancient Dragon",
+              "motivation": "Mindless destruction, controlled by the Pope.",
+              "power_level": "CR 25 Legendary Beast"
+            },
+            "arcs": [
+              {
+                "id": "arc_4_001",
+                "arc_title": "The Fall of the Dragon",
+                "anime_trope": "The World-Ending Boss Fight",
+                "overarching_goal": "Defeat the Ancient Dragon before it passes through the dimensional gate to Earth.",
+                "arc_climax": {
+                  "encounter_type": "combat",
+                  "description": "The OC, riding a dragon or an F-2A fighter jet, intercepts the Ancient Dragon in the sky above the academy.",
+                  "difficulty_class": 25,
+                  "kishotenketsu_phase": "ketsu (resolution)",
+                  "win_condition": "Deal massive damage to the Dragon's core, allowing Louise to cast the ultimate Void spell 'Life'.",
+                  "loss_condition": "The dimensional gate collapses. Both worlds are destroyed."
+                },
+                "character_growth_milestone": "The OC reaches Level 20. If they are from Earth, they earn the choice to return home or stay in Halkeginia forever.",
+                "quests": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "current_state": {
+    "active_campaign_id": "campaign_001",
+    "active_season_id": "season_001",
+    "active_arc_id": "arc_1_001",
+    "active_quest_id": "quest_1_001_1"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "@otaku-gildija/backend",
+  "version": "1.0.0",
+  "description": "Shared backend functions for Otaku Gildija web suite",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "netlify dev"
+  },
+  "dependencies": {
+    "@netlify/functions": "^2.0.0",
+    "@supabase/supabase-js": "^2.38.0",
+    "stripe": "^14.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+}

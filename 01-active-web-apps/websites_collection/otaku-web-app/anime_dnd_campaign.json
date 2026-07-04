@@ -1,0 +1,93 @@
+{
+  "campaign_name": "Spring 2026: Convergence of Worlds",
+  "theme": "Isekai / Guild Fantasy",
+  "anime_inspirations": [
+    "Re:ZERO - Starting Life in Another World Season 4",
+    "That Time I Got Reincarnated as a Slime Season 4",
+    "Witch Hat Atelier",
+    "Daemons of the Shadow Realm"
+  ],
+  "system_instructions_for_ai_dm": {
+    "roleplay_style": "Dramatic, trope-heavy, episodic anime pacing. Use big descriptions for actions.",
+    "dnd_mechanics": {
+      "core_stats": ["Strength", "Agility", "Magic", "Charisma", "Resolve"],
+      "resolution": "d20 system. DC 10 (Easy), DC 15 (Medium), DC 20 (Hard). Apply Advantage/Disadvantage based on roleplay.",
+      "anime_flair": "If a player rolls a Natural 20, trigger an 'Anime Limit Break' or 'Flashback Power-Up'. On a Natural 1, trigger a comedic failure or a dramatic 'villain monologue' moment.",
+      "guild_ranking": "Players start at E-Rank and progress up to S-Rank based on completed arcs.",
+      "otaku_classes": "Instead of traditional RPG classes, players have unique 'Otaku Classes' based on their anime watch history (e.g., The Shonen Protagonist, The Isekai Traveler, The Mecha Ace). They progress through Tiers (e.g., Academy Student -> Awakened Legend) as they watch more anime. Use these classes when referring to their abilities."
+    }
+  },
+  "setting": {
+    "world_name": "Aethelgard (The Nexus Realm)",
+    "hub_location": "The Crossroads Adventurers Guild",
+    "description": "A bustling fantasy metropolis where dimensional rifts occasionally drop 'Otherworlders' (Isekai protagonists) and strange magic beasts. The Guild regulates quests and ranks adventurers to maintain order."
+  },
+  "key_npcs": [
+    {
+      "name": "Guildmaster Vane",
+      "anime_archetype": "The Overpowered Mentor",
+      "personality": "Lazy, often sleeping or eating snacks, but terrifyingly strong when serious.",
+      "role": "Assigns major plot quests and evaluates rank-ups."
+    },
+    {
+      "name": "Elara of the Silver Wand",
+      "anime_archetype": "Tsundere Rival / Magic Scholar",
+      "personality": "Strict about rules, easily flustered, highly intelligent.",
+      "role": "Provides magical exposition (inspired by Witch Hat Atelier) and acts as a rival for the player."
+    }
+  ],
+  "adventure_arcs": [
+    {
+      "arc_id": 1,
+      "arc_title": "Episode 1: The Slime, The Witch, and The Guild Exam",
+      "pacing": "Introductory / World-building",
+      "plot_hook": "The player must pass the E-Rank Adventurer Exam by surviving a mock battle in a magical forest simulation.",
+      "encounters": [
+        {
+          "encounter_id": "1A",
+          "type": "Skill Check",
+          "description": "Navigate the Shifting Woods, where gravity and paths change dynamically.",
+          "mechanic": "Require an Intelligence or Magic Check (DC 13). Failure means encountering a trap.",
+          "anime_moment": "The player is forced to use their unique 'Otherworlder' knowledge to spot the magical anomaly."
+        },
+        {
+          "encounter_id": "1B",
+          "type": "Combat",
+          "description": "Fight the Exam Proctor's Summoned Beast (A giant, aggressively bouncy slime).",
+          "mechanic": "Combat encounter. Slime AC: 12, HP: 30. Slime absorbs physical attacks (Resistance).",
+          "anime_moment": "Mid-battle, Elara the Rival shows up and challenges the player to see who can defeat the slime first. Trigger a Charisma/Resolve check to intimidate or inspire."
+        }
+      ],
+      "arc_conclusion": {
+        "success": "The player is awarded their E-Rank Guild Card, celebrated at the tavern, and gains a 'Rivalry' bond with Elara.",
+        "failure": "The player is saved by Guildmaster Vane at the last second, demoted to F-Rank (Trainee), and must clean the guild halls (comedic ending)."
+      }
+    },
+    {
+      "arc_id": 2,
+      "arc_title": "Episode 2: Shadows in the Capital",
+      "pacing": "Rising Action / Mystery",
+      "plot_hook": "A noble from a neighboring kingdom (with a time-looping curse, heavily Re:Zero inspired) requests an escort through a valley filled with Shadow Daemons.",
+      "encounters": [
+        {
+          "encounter_id": "2A",
+          "type": "Social / Investigation",
+          "description": "Interrogate suspicious merchants before leaving the capital. The noble seems incredibly anxious.",
+          "mechanic": "Charisma (Persuasion or Intimidation) DC 15.",
+          "anime_moment": "If the player succeeds, the noble accidentally reveals they have 'died' on this route three times already."
+        },
+        {
+          "encounter_id": "2B",
+          "type": "Combat / Boss Fight",
+          "description": "Ambush by a Shadow General in the valley.",
+          "mechanic": "Shadow General AC: 15, HP: 60. Weak to Light/Magic.",
+          "anime_moment": "When the boss drops below 20 HP, it undergoes a 'Second Phase' transformation, doubling its size and changing the battlefield terrain."
+        }
+      ],
+      "arc_conclusion": {
+        "success": "The noble survives, gifting the player a rare artifact. The player ranks up to D-Rank.",
+        "failure": "The noble dies, but time loops back to the start of the arc. The player retains their memories but takes a 'Mental Exhaustion' debuff."
+      }
+    }
+  ]
+}

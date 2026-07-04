@@ -1,0 +1,217 @@
+{
+  "quest_schema_version": "1.0",
+  "campaign": {
+    "title": "Witch Hat Atelier: The Forbidden Curse",
+    "setting": "The Great Hall's Domain and Qifrey's Atelier",
+    "level_range": "1-4",
+    "theme": "Magical Discovery, Mystery, Secret Societies",
+    "overview": "An ordinary individual (the Unknowing) discovers a mysterious picture book and accidentally casts a devastating forbidden spell. Saved and hidden by a master witch, they must learn the art of drawn magic to reverse the curse, while being hunted by the radical Brimmed Caps and the authoritarian Knights Moralis."
+  },
+  "magic_system_rules": {
+    "name": "Drawn Magic",
+    "mechanics": [
+      {
+        "component": "Sigil (Core)",
+        "description": "Determines the elemental nature of the spell (Fire, Water, Wind, Earth, Light). Must be drawn first."
+      },
+      {
+        "component": "Signs (Modifiers)",
+        "description": "Dictates the shape, direction, and intensity (e.g., launching, floating, area of effect)."
+      },
+      {
+        "component": "Ring (Trigger)",
+        "description": "The outer circle. The spell is inactive until the ring is perfectly closed."
+      }
+    ],
+    "gameplay_integration": {
+      "casting": "Instead of spell slots, players use Magical Ink. Casting a spell in combat requires an action and an Intelligence (Sleight of Hand) or Intelligence (Arcana) check. The DC depends on the spell's complexity (DC 10 for basic, DC 15 for moderate, DC 20 for advanced).",
+      "pre_casting": "Players can spend time out of combat drawing spells on parchment or cloth, leaving the Ring open. In combat, they can use a Bonus Action to close the Ring and activate the spell.",
+      "forbidden_magic": "Magic affecting the physical body (healing, transformation, memory) is forbidden. Casting it restores HP or grants powerful buffs but increases the 'Moralis Threat Level' by 1."
+    }
+  },
+  "story_arcs": [
+    {
+      "arc_id": 1,
+      "title": "The Awakening & The Master's Secret",
+      "description": "The characters accidentally trigger a forbidden spell from a blank picture book gifted by a Brimmed Cap, petrifying a loved one. Qifrey intervenes and takes them in.",
+      "encounters": [
+        {
+          "name": "The Uncontrollable Curse",
+          "type": "Skill Challenge",
+          "description": "The forbidden magic expands rapidly, threatening to consume the entire room.",
+          "dcs": [
+            {
+              "skill": "Dexterity (Sleight of Hand)",
+              "dc": 12,
+              "success": "You swiftly draw a containment ring, slowing the magic's spread.",
+              "failure": "You fumble the quill, taking 1d6 force damage as the magic flares."
+            },
+            {
+              "skill": "Intelligence (Investigation)",
+              "dc": 14,
+              "success": "You locate the primary sigil powering the curse.",
+              "failure": "The complex geometry overwhelms you."
+            },
+            {
+              "skill": "Dexterity (Arcana)",
+              "dc": 15,
+              "success": "You successfully draw a counter-sign, neutralizing the immediate threat (though the petrification remains).",
+              "failure": "The spell destabilizes, causing an explosion of 2d6 force damage to all nearby."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "arc_id": 2,
+      "title": "Apprenticeship and The First Trial",
+      "description": "The characters must learn the basics of drawing magic at Qifrey's Atelier. They are sent to retrieve the rare Silver-Leaf Herb, guarded by magical creatures.",
+      "encounters": [
+        {
+          "name": "The Brush Bugs",
+          "type": "Combat",
+          "description": "Aggressive insects drawn to the scent of magical ink ambush the party.",
+          "enemies": [
+            {
+              "name": "Swarm of Brush Bugs",
+              "count": 2,
+              "hp": 22,
+              "ac": 12,
+              "speed": "30 ft, fly 20 ft",
+              "attacks": [
+                {
+                  "name": "Bite",
+                  "hit": "+4",
+                  "damage": "2d4 piercing"
+                }
+              ],
+              "special_abilities": [
+                {
+                  "name": "Ink Siphon",
+                  "description": "If a character is holding a pre-drawn spell, the swarm can consume the ink, ruining the spell. Target must make a DC 12 Dexterity saving throw to protect their parchment."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "arc_id": 3,
+      "title": "The Knights and The Brimmed Caps",
+      "description": "A Brimmed Cap attempts to abduct the characters for their connection to the forbidden book, but the Knights Moralis arrive, turning it into a three-way conflict.",
+      "encounters": [
+        {
+          "name": "Interrogation of the Knights",
+          "type": "Roleplay & Social",
+          "description": "A Knight Moralis stops the party, suspicious of their magical aura.",
+          "dcs": [
+            {
+              "skill": "Charisma (Deception)",
+              "dc": 15,
+              "success": "You convince the Knight you are legitimate apprentices of Qifrey.",
+              "failure": "The Knight grows suspicious and demands to inspect your spellbooks, increasing Moralis Threat Level by 2."
+            }
+          ]
+        },
+        {
+          "name": "Ambush of the Brimmed Cap",
+          "type": "Boss Combat",
+          "description": "A Brimmed Cap agent uses forbidden magic to animate stone gargoyles and attack the party in an alleyway.",
+          "enemies": [
+            {
+              "name": "Animated Stone Gargoyle",
+              "count": 2,
+              "hp": 34,
+              "ac": 15,
+              "attacks": [
+                {
+                  "name": "Claw",
+                  "hit": "+5",
+                  "damage": "1d8+3 slashing"
+                }
+              ]
+            }
+          ],
+          "boss": "Brimmed Cap Agent (Elite)"
+        }
+      ]
+    }
+  ],
+  "boss_stats": {
+    "name": "Brimmed Cap Agent (Elite)",
+    "description": "A rogue witch who rejects the Pact, using forbidden magic to alter bodies and memories.",
+    "cr": 4,
+    "ac": 15,
+    "hp": 65,
+    "speed": "30 ft",
+    "stats": {
+      "str": 10,
+      "dex": 16,
+      "con": 14,
+      "int": 18,
+      "wis": 14,
+      "cha": 12
+    },
+    "saving_throws": {
+      "dex": "+5",
+      "int": "+6"
+    },
+    "skills": {
+      "arcana": "+6",
+      "sleight_of_hand": "+7",
+      "stealth": "+5"
+    },
+    "traits": [
+      {
+        "name": "Forbidden Flesh-Mending",
+        "description": "Once per combat, when below half HP, the Agent can draw a forbidden sigil on their own flesh as a bonus action, instantly regaining 3d8 HP."
+      },
+      {
+        "name": "Pre-Drawn Arsenal",
+        "description": "The Agent starts combat with 3 pre-drawn spell scrolls. They can activate one as a bonus action."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Ink Projectile",
+        "type": "Ranged Spell Attack",
+        "hit": "+6",
+        "range": "60 ft",
+        "damage": "2d8+4 force damage",
+        "description": "The Agent fires a condensed bolt of magical ink."
+      },
+      {
+        "name": "Draw: Explosive Ward (Recharge 5-6)",
+        "type": "Area of Effect",
+        "description": "The Agent quickly sketches a fire sigil with blast signs on the ground. A 15-foot radius sphere erupts. DC 14 Dexterity saving throw, taking 4d6 fire damage on a failed save, or half on a successful one."
+      }
+    ],
+    "legendary_actions": [
+      {
+        "cost": 1,
+        "name": "Complete the Ring",
+        "description": "The Agent closes a pre-drawn seal on the environment. One target within 30 ft must succeed on a DC 14 Strength saving throw or be restrained by ethereal chains for 1 minute."
+      },
+      {
+        "cost": 1,
+        "name": "Shift the Canvas",
+        "description": "The Agent glides on a trail of drawn magical ink, moving up to 30 feet without provoking opportunity attacks."
+      }
+    ]
+  },
+  "important_npcs": [
+    {
+      "name": "Qifrey",
+      "role": "Mentor",
+      "description": "A highly skilled, patient witch who runs his own Atelier. He has a dark ulterior motive: using the players' connection to the forbidden picture book to track down the Brimmed Caps, who cost him an eye and his memories.",
+      "mechanic": "Can provide hints on spell drawing (advantage on next Arcana check to draw a spell). However, if the Brimmed Caps are involved, he may act recklessly."
+    },
+    {
+      "name": "Knights Moralis Inquisitor",
+      "role": "Law Enforcement",
+      "description": "The magical police force of the Great Hall. They hunt down rogue magic users and erase the memories of Unknowing who learn too much.",
+      "mechanic": "If 'Moralis Threat Level' reaches 5, an Inquisitor squad ambushes the party. They attempt to cast memory-erasure spells (DC 15 Wisdom save or forget the last 24 hours of magic use)."
+    }
+  ]
+}

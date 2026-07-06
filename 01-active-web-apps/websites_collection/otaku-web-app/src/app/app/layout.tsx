@@ -7,6 +7,8 @@ import CheckoutModal from '../../components/auth/CheckoutModal';
 import ProtectedRoute from '../../components/ProtectedRoute';
 import AppMembershipPrompts from '../../components/membership/AppMembershipPrompts';
 
+import RestrictedWrapper from '../../components/auth/RestrictedWrapper';
+
 export default function AppRouteLayout({ children }: { children: React.ReactNode }) {
   const { user, upgradeToPremium } = useAuth();
   const [showCheckout, setShowCheckout] = useState(false);
@@ -38,12 +40,14 @@ export default function AppRouteLayout({ children }: { children: React.ReactNode
 
   return (
     <ProtectedRoute>
-      <Suspense fallback={null}>
-        <AppMembershipPrompts />
-      </Suspense>
-      <AppLayout userTier={userTier} onUpgrade={handleUpgrade}>
-        {children}
-      </AppLayout>
+      <RestrictedWrapper>
+        <Suspense fallback={null}>
+          <AppMembershipPrompts />
+        </Suspense>
+        <AppLayout userTier={userTier} onUpgrade={handleUpgrade}>
+          {children}
+        </AppLayout>
+      </RestrictedWrapper>
       <CheckoutModal 
         isOpen={showCheckout} 
         onClose={() => setShowCheckout(false)} 

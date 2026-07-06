@@ -120,13 +120,30 @@ export default function RPGProfile() {
           <div className="flex-1 text-center md:text-left">
             <h1 className="text-4xl md:text-5xl font-black uppercase tracking-widest text-white drop-shadow-[0_2px_10px_rgba(255,255,255,0.3)] flex items-center justify-center md:justify-start gap-3">
               {user?.displayName || 'Player Account'}
-              <Crown className="text-[var(--anime-gold)]" size={32} />
+              {user?.tier === 'premium' ? (
+                <Crown className="text-yellow-400 drop-shadow-[0_0_15px_rgba(255,251,0,0.8)] animate-glow-pulse" size={32} />
+              ) : user?.tier === 'starter' ? (
+                <Star className="text-gray-300 drop-shadow-[0_0_10px_rgba(209,213,219,0.5)]" size={28} />
+              ) : null}
             </h1>
             
             <div className="mt-2 flex flex-wrap items-center justify-center md:justify-start gap-4">
               <span className="px-4 py-1 rounded-full bg-black/50 border border-[var(--anime-cyan)]/50 text-[var(--anime-cyan)] font-bold tracking-widest text-sm flex items-center gap-2">
                 <Sparkles size={14} /> {account.aestheticTier}
               </span>
+              
+              {/* Early Access Badges */}
+              {user?.tier === 'premium' && (
+                <span className="px-4 py-1 rounded-full bg-yellow-500/10 border border-yellow-500/50 text-yellow-400 font-black tracking-widest text-sm flex items-center gap-2 shadow-[0_0_10px_rgba(255,251,0,0.2)]">
+                  <Crown size={14} /> FOUNDER
+                </span>
+              )}
+              {user?.tier === 'starter' && (
+                <span className="px-4 py-1 rounded-full bg-gray-500/10 border border-gray-500/50 text-gray-300 font-bold tracking-widest text-sm flex items-center gap-2">
+                  <Star size={14} /> PIONEER
+                </span>
+              )}
+
               <span className="text-gray-400 font-bold flex items-center gap-1 text-sm">
                 <Zap size={14} className="text-yellow-400" /> Total XP: {account.totalXp.toLocaleString()}
               </span>

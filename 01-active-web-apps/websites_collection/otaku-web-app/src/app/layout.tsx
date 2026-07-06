@@ -5,6 +5,7 @@ import { GamificationWrapper } from "@/components/providers/GamificationWrapper"
 import { AppShell } from "@/components/layout/AppShell";
 import AuthModal from "@/components/auth/AuthModal";
 import Script from "next/script";
+import { LanguageProvider } from "@/services/i18n";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -68,10 +69,12 @@ export default function RootLayout({
         <Script src="/live2dcubismcore.min.js" strategy="beforeInteractive" />
         <Script src="/live2d.min.js" strategy="beforeInteractive" />
         <AuthProvider>
-          <GamificationWrapper>
-            <AppShell>{children}</AppShell>
-            <AuthModal />
-          </GamificationWrapper>
+          <LanguageProvider>
+            <GamificationWrapper>
+              <AppShell>{children}</AppShell>
+              <AuthModal />
+            </GamificationWrapper>
+          </LanguageProvider>
         </AuthProvider>
       </body>
     </html>

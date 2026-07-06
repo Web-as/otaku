@@ -11,26 +11,29 @@ const HeroSection: React.FC = () => {
 
   return (
     <section className="relative pt-32 pb-16 lg:pt-44 lg:pb-28 overflow-hidden z-10 text-center">
-      {/* Background glow orbs */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-violet-600/8 rounded-full blur-[120px] pointer-events-none" aria-hidden="true" />
-      <div className="absolute bottom-0 right-1/4 w-[400px] h-[300px] bg-pink-600/6 rounded-full blur-[100px] pointer-events-none" aria-hidden="true" />
+      {/* Background glow orbs - Nano Banana palette */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-yellow-400/10 rounded-full blur-[120px] pointer-events-none" aria-hidden="true" />
+      <div className="absolute bottom-0 right-1/4 w-[400px] h-[300px] bg-pink-600/10 rounded-full blur-[100px] pointer-events-none" aria-hidden="true" />
+      <div className="absolute top-1/2 left-1/4 w-[500px] h-[500px] bg-cyan-500/5 rounded-full blur-[150px] pointer-events-none" aria-hidden="true" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Pre-sale Badge */}
-        <div className="inline-flex items-center px-4 py-1.5 rounded-full border border-violet-500/30 bg-violet-500/10 text-violet-400 text-[10px] sm:text-xs font-bold mb-8 font-mono tracking-widest uppercase animate-fade-in-up">
+        <div className="inline-flex items-center px-4 py-1.5 rounded-full border border-yellow-500/50 bg-yellow-500/10 text-yellow-400 text-[10px] sm:text-xs font-bold mb-8 font-mono tracking-widest uppercase shadow-[0_0_15px_rgba(255,251,0,0.2)]">
           <Sparkles className="w-3 h-3 mr-2" />
-          {t.hero.presale} — Strict $1.00 Price
+          Currently in Closed Beta
         </div>
 
         {/* Main Heading */}
-        <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tighter mb-8 leading-[0.9] text-white drop-shadow-2xl animate-fade-in-up delay-100">
-          {t.hero.title_prefix} <br />
-          <span className="text-gradient-brand">{t.hero.title_suffix}</span>
+        <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tighter mb-6 leading-[0.9] text-white drop-shadow-2xl">
+          The Ultimate <br />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-yellow-500 to-pink-500">
+            Anime Ecosystem.
+          </span>
         </h1>
 
         {/* Subtitle */}
-        <p className="mt-4 max-w-2xl mx-auto text-lg sm:text-xl text-gray-400 mb-10 font-medium px-4 leading-relaxed animate-fade-in-up delay-200">
-          {t.hero.subtitle}
+        <p className="mt-4 max-w-2xl mx-auto text-lg sm:text-xl text-gray-400 mb-10 font-medium px-4 leading-relaxed">
+          Otaku Gildija is currently in closed development. Secure your Founder's Pack today to unlock immediate beta access, exclusive profile badges, and permanent web-app perks.
         </p>
 
         {/* Stats Counter Row */}
@@ -50,27 +53,26 @@ const HeroSection: React.FC = () => {
         </div>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col items-center gap-6 mb-16 animate-fade-in-up delay-500">
+        <div className="flex flex-col items-center gap-6 mb-16">
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto px-4">
             <Link
-              href="/pricing"
-              className="px-10 py-5 bg-white text-black hover:bg-gray-100 rounded-md font-black text-sm uppercase tracking-widest shadow-[0_0_40px_rgba(255,255,255,0.2)] transition-all transform hover:scale-105 hover:-translate-y-1 flex items-center justify-center"
+              href="/preregister"
+              className="px-10 py-5 bg-gradient-to-r from-yellow-400 to-yellow-600 text-black rounded-md font-black text-sm uppercase tracking-widest shadow-[0_0_40px_rgba(255,251,0,0.4)] transition-all transform hover:scale-105 hover:-translate-y-1 flex items-center justify-center"
             >
               <Globe className="w-5 h-5 mr-3" />
-              Open Web App — $1.00
+              Become a Founder
             </Link>
             <Link
-              href="/vn"
-              className="px-10 py-5 bg-transparent border border-violet-500/40 text-violet-400 hover:bg-violet-500/10 hover:border-violet-400 rounded-md font-black text-sm uppercase tracking-widest transition-all transform hover:scale-105 hover:-translate-y-1 flex items-center justify-center"
+              href="#features"
+              className="px-10 py-5 bg-black/40 backdrop-blur-md border border-white/10 text-white hover:bg-white/10 rounded-md font-black text-sm uppercase tracking-widest transition-all flex items-center justify-center"
             >
-              <Sparkles className="w-5 h-5 mr-3" />
-              Try VN Studio
+              Explore Features
             </Link>
           </div>
 
-          <p className="text-[10px] text-gray-500 font-mono uppercase tracking-widest flex items-center gap-2">
-            <Check className="w-3 h-3 text-green-500" />
-            Browser + WebXR • No Install • One Dollar
+          <p className="text-[10px] text-yellow-500/70 font-mono uppercase tracking-widest flex items-center gap-2">
+            <Check className="w-3 h-3 text-yellow-500" />
+            Beta Spots Available • Instant Download
           </p>
         </div>
 

@@ -13,6 +13,8 @@
   --color-brand-cyan: #00f0ff;
   --color-brand-magenta: #ff00ff;
   --color-anime-gold: #d8b56a;
+  --color-nano-yellow: #fffb00; /* The signature Nano Banana yellow */
+  --color-nano-accent: #facc15;
 }
 
 /* ============================================================
@@ -37,6 +39,8 @@
     --anime-pink-400: #f472b6;
     --anime-pink-500: #ec4899;
     --anime-pink-600: #db2777;
+    --anime-nano-yellow: #fffb00;
+    --anime-nano-accent: #facc15;
 
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.5;

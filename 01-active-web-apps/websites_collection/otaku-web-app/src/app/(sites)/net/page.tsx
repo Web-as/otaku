@@ -95,19 +95,19 @@ function FloatingCTABar() {
         </div>
         <div className="flex items-center space-x-4 w-full md:w-auto justify-end">
           <div className="hidden md:flex flex-col text-right mr-4">
-            <span className="text-xs text-gray-500 font-mono uppercase tracking-widest">
-              Starter Pack
+            <span className="text-xs text-yellow-500 font-mono uppercase tracking-widest">
+              Beta Tester Pack
             </span>
             <span className="text-xl text-white font-black">
-              Nuo €1.00
+              €1.00
             </span>
           </div>
-          <button
-            onClick={() => setAuthModalOpen(true)}
-            className="w-full md:w-auto px-6 py-3 bg-gradient-to-r from-violet-600 to-pink-600 hover:from-violet-500 hover:to-pink-500 text-white font-black uppercase tracking-widest rounded-sm shadow-[0_0_20px_rgba(139,92,246,0.4)] flex items-center justify-center text-xs transition-transform hover:-translate-y-0.5"
+          <Link
+            href="/preregister"
+            className="w-full md:w-auto px-6 py-3 bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-black font-black uppercase tracking-widest rounded-sm shadow-[0_0_20px_rgba(255,251,0,0.4)] flex items-center justify-center text-xs transition-transform hover:-translate-y-0.5"
           >
-            Atrakinti
-          </button>
+            Become a Founder
+          </Link>
         </div>
       </div>
     </div>

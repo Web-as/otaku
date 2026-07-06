@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "Otaku Gildija — Unified Anime Platform",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --webpack",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -51,6 +51,7 @@
     "react-i18next": "^17.0.8",
     "remark": "^15.0.1",
     "remark-html": "^16.0.1",
+    "resend": "^6.17.1",
     "stripe": "^22.1.1",
     "three": "^0.184.0",
     "use-sound": "^5.0.0",
